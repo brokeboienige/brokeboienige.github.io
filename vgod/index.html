@@ -8,7 +8,7 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
         <style>
             html, body{
                 width: 100%;
@@ -36,12 +36,16 @@
         <script>
         window.OneSignal = window.OneSignal || [];
         OneSignal.push(function() {
+            OneSignal.SERVICE_WORKER_PARAM = { scope: '/vgod/' };
+            OneSignal.SERVICE_WORKER_PATH = 'vgod/OneSignalSDKWorker.js'
+            OneSignal.SERVICE_WORKER_UPDATER_PATH = 'vgod/OneSignalSDKWorker.js'
+            OneSignal.init(initConfig);
             OneSignal.init({
-            appId: "cf17619d-b4d5-4639-af55-8c41a8c378a3",
-            safari_web_id: "web.onesignal.auto.66c89079-ab76-4c24-84be-2fca07f56f6c",
-            notifyButton: {
-                enable: true,
-            },
+                appId: "cf17619d-b4d5-4639-af55-8c41a8c378a3",
+                safari_web_id: "web.onesignal.auto.66c89079-ab76-4c24-84be-2fca07f56f6c",
+                notifyButton: {
+                    enable: true,
+                },
             });
         });
         </script>
