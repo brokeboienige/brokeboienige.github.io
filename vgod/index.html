@@ -51,9 +51,9 @@
                 document.body.classList.remove('bg-success');
             }
             function checkPeita(){
-                axios.get("http://20.206.138.177:3000").then((res)=>{
+                axios.get("https://shopee.com.br/api/v4/recommend/recommend?bundle=shop_page_product_tab_main&limit=999&offset=0&section=shop_page_product_tab_main_sec&shopid=377206033").then((res)=>{
                     
-                    if(res.data["peitasaiu"] == true){
+                    if(res.data['data']['sections'][0]['total'] > 0){
                         removeAll()
                         document.getElementById("check-text").innerHTML = "SIM!! :)"
                         document.body.classList.add('bg-success');
