@@ -33,6 +33,18 @@
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
         <script>
+        window.OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({
+            appId: "cf17619d-b4d5-4639-af55-8c41a8c378a3",
+            safari_web_id: "web.onesignal.auto.66c89079-ab76-4c24-84be-2fca07f56f6c",
+            notifyButton: {
+                enable: true,
+            },
+            });
+        });
+        </script>
+        <script>
             function removeAll(){
                 document.body.classList.remove('bg-dark');
                 document.body.classList.remove('bg-danger');
