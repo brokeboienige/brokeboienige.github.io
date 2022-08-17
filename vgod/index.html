@@ -33,16 +33,16 @@
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
         <script>
-            window.OneSignal = window.OneSignal || [];
-            OneSignal.push(function() {
-                OneSignal.init({
-                appId: "cf17619d-b4d5-4639-af55-8c41a8c378a3",
-                safari_web_id: "web.onesignal.auto.66c89079-ab76-4c24-84be-2fca07f56f6c",
-                notifyButton: {
-                    enable: true,
-                },
-                });
+        window.OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({
+            appId: "cf17619d-b4d5-4639-af55-8c41a8c378a3",
+            safari_web_id: "web.onesignal.auto.66c89079-ab76-4c24-84be-2fca07f56f6c",
+            notifyButton: {
+                enable: true,
+            },
             });
+        });
         </script>
         <script>
             function removeAll(){
@@ -51,9 +51,9 @@
                 document.body.classList.remove('bg-success');
             }
             function checkPeita(){
-                axios.get("https://shopee.com.br/api/v4/recommend/recommend?bundle=shop_page_product_tab_main&limit=999&offset=0&section=shop_page_product_tab_main_sec&shopid=377206033").then((res)=>{
+                axios.get("https:peitavgod.r1ser.club:3000").then((res)=>{
                     
-                    if(res.data['data']['sections'][0]['total'] > 0){
+                    if(res.data["peitasaiu"] == true){
                         removeAll()
                         document.getElementById("check-text").innerHTML = "SIM!! :)"
                         document.body.classList.add('bg-success');
