@@ -51,7 +51,7 @@
                 document.body.classList.remove('bg-success');
             }
             function checkPeita(){
-                axios.get("https://peitavgod.r1ser.club:3000").then((res)=>{
+                axios.get("https://peitavgod.r1ser.club").then((res)=>{
                     
                     if(res.data["peitasaiu"] == true){
                         removeAll()
